@@ -77,13 +77,13 @@ public class WebCrawler {
 
     public void crawl() {
         while (!toVisit.isEmpty()) {
-            pool.execute(new Crawler());
+            pool.execute(new Thread(new Crawler()));
         }
     }
 
     public static void main(String... args) {
         ArrayList<String> urls = new ArrayList<>();
-        urls.add("http://codo.today");
+        urls.add("http://google.com");
         WebCrawler webCrawler = new WebCrawler(urls, 4);
         webCrawler.crawl();
     }
