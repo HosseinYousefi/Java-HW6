@@ -81,10 +81,4 @@ public class WebCrawler {
         }
     }
 
-    public static void main(String... args) {
-        ArrayList<String> urls = new ArrayList<>();
-        urls.add("http://google.com");
-        WebCrawler webCrawler = new WebCrawler(urls, 4);
-        webCrawler.crawl();
-    }
 }
